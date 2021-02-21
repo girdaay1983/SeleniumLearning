@@ -11,42 +11,26 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;		
+import org.testng.annotations.BeforeMethod;
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
+
+
 public class NewClass {		
-	    private WebDriver driver;		
+	   	
 		@Test				
-		public void testEasy() {	
-			driver.get("http://demo.guru99.com/selenium/guru99home/");  
-			System.out.println("Opened URL");
-			String title = driver.getTitle();	
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		public void testNoofcircuits2017() {
+			
+			given().
+			when().
+			get("http://ergast.com/api/f1/2017/circuits.json").
+			then().
+			assertThat().
+			statusCode(200).
+			and().
 
-			Assert.assertTrue(title.contains("Demo Guru99 Page")); 		
-			System.out.println("Test testEasy Passed");
-		}	
-		@Test				
-		public void testtwo() {	
-			driver.get("http://demo.guru99.com/selenium/guru99home/");  
-			System.out.println("Opened URL");
-			String title = driver.getTitle();	
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-			Assert.assertTrue(title.contains("Demo Guru99 Page")); 		
-			System.out.println("Test testtwo Passed");
+			body("MRData.CircuitTable.Circuits.circuitId",hasSize(20));
+			System.out.println("Test rest assured Passed");
+			
 		}
-		@BeforeMethod
-		public void beforeTest() {	
-		//	System.setProperty("webdriver.chrome.driver","E:\\chromedriver.exe");
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Drivers/chromedriver.exe");
-		//	DesiredCapabilities capability = new DesiredCapabilities();
-			//capability.setCapability("binary", "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
-			 //driver = new ChromeDriver(capability);
-			 driver = new ChromeDriver();
-			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		}		
-		@AfterMethod
-		public void afterTest() {
-			driver.quit();			
-		}		
-}	
+}
