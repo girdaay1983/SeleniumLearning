@@ -36,12 +36,12 @@ public class NewTest {
 		}
 		@BeforeMethod
 		public void beforeTest() {	
-			//System.setProperty("webdriver.chrome.driver","E:\\chromedriver.exe");
-			//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Drivers/chromedriver.exe");
-			DesiredCapabilities capability = new DesiredCapabilities();
-			capability.setCapability("binary", "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
-			 driver = new ChromeDriver(capability);
-		//	 driver = new ChromeDriver();
+		//	System.setProperty("webdriver.chrome.driver","E:\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Drivers/chromedriver.exe");
+		//	DesiredCapabilities capability = new DesiredCapabilities();
+			//capability.setCapability("binary", "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
+			 //driver = new ChromeDriver(capability);
+			 driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		}		

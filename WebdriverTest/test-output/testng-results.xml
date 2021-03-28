@@ -1,37 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="18592" started-at="2021-02-20T20:36:33Z" finished-at="2021-02-20T20:36:51Z">
+  <suite name="Default suite" duration-ms="10764" started-at="2021-03-27T23:41:50Z" finished-at="2021-03-27T23:42:01Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="18592" started-at="2021-02-20T20:36:33Z" finished-at="2021-02-20T20:36:51Z">
-      <class name="example.NewTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:example.NewTest@78c730]" name="beforeTest" is-config="true" duration-ms="5214" started-at="2021-02-21T02:06:33Z" finished-at="2021-02-21T02:06:38Z">
+    <test name="Default test" duration-ms="10764" started-at="2021-03-27T23:41:50Z" finished-at="2021-03-27T23:42:01Z">
+      <class name="example.NewClass">
+        <test-method status="PASS" signature="TEST_2()[pri:0, instance:example.NewClass@bd1b6a]" name="TEST_2" duration-ms="10745" started-at="2021-03-28T05:11:50Z" finished-at="2021-03-28T05:12:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="testEasy()[pri:0, instance:example.NewTest@78c730]" name="testEasy" duration-ms="3130" started-at="2021-02-21T02:06:38Z" finished-at="2021-02-21T02:06:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testEasy -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:example.NewTest@78c730]" name="afterTest" is-config="true" duration-ms="1227" started-at="2021-02-21T02:06:41Z" finished-at="2021-02-21T02:06:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:example.NewTest@78c730]" name="beforeTest" is-config="true" duration-ms="5020" started-at="2021-02-21T02:06:42Z" finished-at="2021-02-21T02:06:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="testtwo()[pri:0, instance:example.NewTest@78c730]" name="testtwo" duration-ms="2780" started-at="2021-02-21T02:06:47Z" finished-at="2021-02-21T02:06:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testtwo -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:example.NewTest@78c730]" name="afterTest" is-config="true" duration-ms="1197" started-at="2021-02-21T02:06:50Z" finished-at="2021-02-21T02:06:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- example.NewTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- TEST_2 -->
+      </class> <!-- example.NewClass -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
